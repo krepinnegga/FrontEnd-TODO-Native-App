@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import SafeAreaWrapper from '@/components/SafeAreaWrapper';
+import SafeAreaWrapper from '@/components/shared/SafeAreaWrapper';
 
 const EditTaskScreen = () => {
   return (

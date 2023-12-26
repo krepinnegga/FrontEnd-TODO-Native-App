@@ -1,11 +1,11 @@
-import { IUser } from "@/types";
+import { IUser, IAuthenticatedUser } from "@/types";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import create from "zustand";
+import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 interface IUserGlobalStore {
-  user: IUser | null;
-  updateUser: (user: IUser | null) => void;
+  user: IAuthenticatedUser | null;
+  updateUser: (user: IAuthenticatedUser | null) => void;
 }
 
 const useUserGlobalStore = create<IUserGlobalStore>()(

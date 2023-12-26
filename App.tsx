@@ -4,11 +4,11 @@ import Navigation from '@/navigation/Navigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import useUserGlobalStore from './src/store/useUserGlobalStore';
+import { useEffect } from 'react';
 
 
 export default function App() {
-  const {user, updateUser} = useUserGlobalStore()
-  
+ 
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaProvider>

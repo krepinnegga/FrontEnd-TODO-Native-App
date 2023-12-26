@@ -1,4 +1,4 @@
-import SafeAreaWrapper from '@/components/SafeAreaWrapper'
+import SafeAreaWrapper from '@/components/shared/SafeAreaWrapper'
 import { View, Text } from 'react-native'
 
 const CompletedScreen = () => {
