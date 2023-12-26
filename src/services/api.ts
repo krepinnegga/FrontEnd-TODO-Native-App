@@ -1,9 +1,9 @@
 import { IUser } from "@/types"
-import axiosInstance from "./config"
+import axiosInstance, { TODO_TOKEN_NAME, saveToken } from "./config"
 
 type RegisterUserTypes = IUser
 
-type LoginUserTypes = IUser
+type LoginUserTypes = Omit<IUser, "name">
 
 export const registerUser = async ({
     name,
@@ -32,6 +32,9 @@ export const registerUser = async ({
         email,
         password, 
       })
+      const _token = res.data.token
+      axiosInstance.defaults.headers.common["Authorization"] = _token;
+      saveToken(TODO_TOKEN_NAME, _token)
       return res?.data.user
     } catch (error) {
       console.log("error in registerUser", error)
