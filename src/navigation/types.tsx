@@ -1,5 +1,6 @@
 import { CompositeNavigationProp, NavigatorScreenParams } from "@react-navigation/native"
 import { NativeStackNavigationProp } from "@react-navigation/native-stack"
+import { ICategory } from '@/types';
 
 export type AuthStackParamList = {
     Welcome: undefined
@@ -25,7 +26,7 @@ export type CategoryStackParamList = {
         id: string
     }
     CreateCategory: {
-       id?: string
+       category?: ICategory
     } 
 }
 
@@ -51,3 +52,9 @@ export type AuthScreenNavigationType<
   NativeStackNavigationProp<AuthStackParamList, RouteName>,
   NativeStackNavigationProp<AppStackParamList, "Root">
 >
+
+export type CategoriesNavigationType =
+  NativeStackNavigationProp<CategoryStackParamList>
+
+export type HomeScreenNavigationType =
+  NativeStackNavigationProp<HomeStackParamList>
