@@ -26,7 +26,7 @@ const CategoriesScreen = () => {
   return (
     <SafeAreaWrapper>
     <Box flex={1} px="4">
-      <Text variant="textXl" fontWeight="700" mb="10">Categories</Text>
+      <Text variant="textXl" fontWeight="700" mb="5">Categories</Text>
       <FlatList 
       data={data}
       renderItem={renderItem}

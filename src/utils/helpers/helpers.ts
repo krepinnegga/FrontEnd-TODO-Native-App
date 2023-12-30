@@ -12,6 +12,7 @@ const palette = {
   sky500: "#0ea5e9",
   purple500: "#a855f7",
   purple600: "#9333ea",
+  gray9: "#101928",
 }
 
 export const getColors = () => {

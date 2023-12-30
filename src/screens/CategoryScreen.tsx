@@ -67,12 +67,11 @@ const CategoryScreen = () => {
         <FlatList 
           data={tasks}
           renderItem={({ item, index }) => {
-            return( 
-            <Box>
-               <Text>{item.name}</Text>
-            </Box>
-            )
+            return <Task task={item} 
+                  //  color={category?.color?.code} 
+                   />
           }}
+          ItemSeparatorComponent={() => <Box height={14}/> }
         />
       </Box>
     </SafeAreaWrapper>

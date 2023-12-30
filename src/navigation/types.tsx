@@ -1,6 +1,6 @@
 import { CompositeNavigationProp, NavigatorScreenParams } from "@react-navigation/native"
 import { NativeStackNavigationProp } from "@react-navigation/native-stack"
-import { ICategory } from '@/types';
+import { ICategory, ITask } from '@/types';
 
 export type AuthStackParamList = {
     Welcome: undefined
@@ -17,7 +17,9 @@ export type RootBottomTabParamList = {
 
 export type HomeStackParamList = {
     Home: undefined
-    EditTask: undefined
+    EditTask: {
+      task: ITask
+    }
 }
 
 export type CategoryStackParamList = {
