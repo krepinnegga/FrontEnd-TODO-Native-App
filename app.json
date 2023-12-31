@@ -15,16 +15,33 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": false,
+      "bundleIdentifier": "com.krepinnegga.TodoApp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/splash.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.krepin_negga.TodoApp"
     },
     "web": {
       "favicon": "./assets/splash.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7946bab9-08b7-43de-a327-8abcbcef431c"
+      }
+    },
+    "owner": "krepin_negga",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7946bab9-08b7-43de-a327-8abcbcef431c",
+      "requestHeaders": {
+        "expo-channel-name": "main"
+      }
     }
   }
 }
