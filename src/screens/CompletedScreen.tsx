@@ -22,7 +22,7 @@ const CompletedScreen = () => {
     data: tasks,
     isLoading: isLoadingTasks,
     mutate: mutateTasks,
-  } = useSWR<ITask[]>(`api/tasks/completed`, fetcher, {
+  } = useSWR<ITask[]>(`/api/tasks/completed`, fetcher, {
     refreshInterval: 1000,
   })
 

@@ -19,18 +19,20 @@ const CategoryScreen = () => {
 
   const { id } = route.params
 
+  console.log(id)
+
   const { data: category, isLoading: isLoadingCategory } = useSWR<ICategory>(
-    `api/category/${id}`,
+    `/api/category/${id}`,
     fetcher
   )
 
-  //console.log(`category`, JSON.stringify(category, null, 2))
+  console.log(`category`, JSON.stringify(category, null, 2))
 
   const {
     data: tasks,
     isLoading: isLoadingTasks,
     mutate: mutateTasks,
-  } = useSWR<ITask[]>(`api/tasks/tasks-by-categories/${id}`, fetcher, {
+  } = useSWR<ITask[]>(`/api/tasks/tasks-by-categories/${id}`, fetcher, {
     refreshInterval: 1000,
   })
 
