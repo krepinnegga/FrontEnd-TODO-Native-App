@@ -33,9 +33,9 @@ const CompletedScreen = () => {
   return (
     <SafeAreaWrapper>
       <Box flex={1} mx="4">
-        <Box width={40}>
+        {/* <Box width={40}>
           <NavigateBack />
-        </Box>
+        </Box> */}
         <Box height={16} />
         <Box flexDirection="row">
           <Text
@@ -51,11 +51,12 @@ const CompletedScreen = () => {
         <FlatList 
           data={tasks}
           renderItem={({ item, index }) => {
-            return <Task task={item} 
+            return <Task task={item} mutateTasks={mutateTasks}
                   //  color={category?.color?.code}
                    />
           }}
-          ItemSeparatorComponent={() => <Box height={14}/> }
+          ItemSeparatorComponent={() => <Box height={14}/>}
+          keyExtractor={(item) => item._id}
         />
       </Box>
     </SafeAreaWrapper>

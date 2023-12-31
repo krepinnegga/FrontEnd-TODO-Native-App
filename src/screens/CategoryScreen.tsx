@@ -24,7 +24,7 @@ const CategoryScreen = () => {
     fetcher
   )
 
-  console.log(`category`, JSON.stringify(category, null, 2))
+  //console.log(`category`, JSON.stringify(category, null, 2))
 
   const {
     data: tasks,
@@ -67,7 +67,7 @@ const CategoryScreen = () => {
         <FlatList 
           data={tasks}
           renderItem={({ item, index }) => {
-            return <Task task={item} 
+            return <Task task={item} mutateTasks={mutateTasks}
                   //  color={category?.color?.code} 
                    />
           }}
