@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as SecureStore from 'expo-secure-store';
 
-export const BASE_URL= "https://todo-rest-api-sqou.onrender.com"
+export const BASE_URL= "https://todo-rest-api-sm3w.onrender.com"
 const TIME_OUT = 30000;
 export const TODO_TOKEN_NAME = "todo_user_token"
 
